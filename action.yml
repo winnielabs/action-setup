@@ -13,8 +13,8 @@ runs:
         REVIEWDOG_VERSION: ${{ inputs.reviewdog_version }}
         REVIEWDOG_TEMPDIR: ${{ runner.temp }}
     - run: |
-        echo "::group::📖 reviewdog -h"
-        reviewdog -h 2>&1 || true
+        echo "::group::📖 reviewdog -version"
+        reviewdog -version
         echo "::endgroup::"
       shell: bash
 
