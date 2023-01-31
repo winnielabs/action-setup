@@ -13,7 +13,7 @@ fi
 
 INSTALL_SCRIPT='https://raw.githubusercontent.com/winnielabs/reviewdog/master/install.sh'
 if [ "${VERSION}" == 'nightly' ] ; then
-  INSTALL_SCRIPT='https://raw.githubusercontent.com/reviewdog/nightly/master/install.sh'
+  INSTALL_SCRIPT='https://raw.githubusercontent.com/winnielabs/nightly/master/install.sh'
   VERSION='latest'
 fi
 
