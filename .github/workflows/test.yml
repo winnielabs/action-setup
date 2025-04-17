@@ -13,18 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: install reviewdog (default)
+      - name: Install reviewdog
         uses: ./
-      - run: reviewdog -version
 
-      - name: install reviewdog (nightly)
-        uses: ./
-        with:
-          reviewdog_version: nightly
-      - run: reviewdog -version | grep nightly
-
-      - name: install reviewdog (with reviewdog_version)
-        uses: ./
-        with:
-          reviewdog_version: v0.10.0
-      - run: test "$(reviewdog -version)" = '0.10.0'
+      - name: Check reviewdog version
+        shell: bash
+        run: |
+          reviewdog -version
+          test "$(reviewdog -version)" = 'master'

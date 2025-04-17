@@ -13,7 +13,7 @@ This action installs :dog: [reviewdog](https://github.com/reviewdog/reviewdog).
 ```yaml
 inputs:
   reviewdog_version:
-    description: 'reviewdog version. [latest,nightly,vX.Y.Z]'
+    description: 'reviewdog version. [latest,vX.Y.Z]'
     default: 'latest'
 ```
 
@@ -32,14 +32,5 @@ steps:
   - uses: reviewdog/action-setup@v1
     with:
       reviewdog_version: v0.14.1
-  - run: reviewdog -version
-```
-
-### Nightly
-```yaml
-steps:
-  - uses: reviewdog/action-setup@v1
-    with:
-      reviewdog_version: nightly
   - run: reviewdog -version
 ```

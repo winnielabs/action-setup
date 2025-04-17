@@ -2,7 +2,7 @@ name: 'Setup reviewdog'
 description: '🐶 This action sets up reviewdog'
 inputs:
   reviewdog_version:
-    description: 'reviewdog version. [latest,nightly,vX.Y.Z]'
+    description: 'reviewdog version. [latest,vX.Y.Z]'
     default: 'latest'
 runs:
   using: 'composite'
